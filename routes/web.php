@@ -2,6 +2,6 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('Client')->group(function () {
+    Route::get('/', 'HomeController@index')->name('home');
 });
